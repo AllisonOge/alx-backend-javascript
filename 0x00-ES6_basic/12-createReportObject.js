@@ -1,10 +1,12 @@
 export default function createReportObject(employeeList) {
   const allEmployees = {};
-  
+
   for (const key in employeeList) {
-    allEmployees[key] = [...employeeList[key]];
+    if (Object.hasOwn(employeeList, key)) {
+      allEmployees[key] = [...employeeList[key]];
+    }
   }
-  
+
   return {
     allEmployees,
     getNumberOfDepartments() {

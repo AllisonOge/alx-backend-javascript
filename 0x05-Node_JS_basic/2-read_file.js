@@ -9,9 +9,6 @@ function countStudents(path) {
   const payload = fs.readFileSync(path, 'utf8');
   // split the content by new lines
   const lines = payload.trim().split('\n');
-  if (lines.length === 0) {
-    throw new Error('Cannot load the database');
-  }
   const header = lines.shift(); // eslint-disable-line no-unused-vars
   const students = [];
   const fields = {};
@@ -30,7 +27,7 @@ function countStudents(path) {
   // print the number of students
   console.log(`Number of students: ${students.length}`);
   for (const field in fields) {
-    if (Object.hasOwn(fields, field)) {
+    if (Object.hasOwnProperty.call(fields, field)) {
       const message = `Number of students in ${field}: ${fields[field].length}.`
             + `List: ${fields[field].join(', ')}`;
       console.log(message);

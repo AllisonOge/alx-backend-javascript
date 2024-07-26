@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "unittests in js readme",
   "scripts": {
-    "test": "mocha *.test.js"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.5.0",
-    "mocha": "^10.7.0"
+    "mocha": "^10.7.0",
+    "sinon": "^7.5.0"
   }
 }

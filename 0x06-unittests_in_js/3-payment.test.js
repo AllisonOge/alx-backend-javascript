@@ -1,5 +1,5 @@
 const sinon = require('sinon');
-const sendPaymentRequestToApi = require('./3-payments');
+const sendPaymentRequestToApi = require('./3-payment');
 const Utils = require('./utils');
 
 describe('sendPaymentRequestToApi', function () {
